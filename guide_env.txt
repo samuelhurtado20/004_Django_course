@@ -1,0 +1,53 @@
+INSTALAR ENTORNOS VIRTUALES Y DJANGO EN WINDOWS REQUISITOS PREVIOS Tener Python instalado ¿POR QUÉ SE USAN ENTORNOS VIRTUALES? Permiten mantener versiones específicas de paquetes para cada proyecto.
+
+Evitan conflictos entre librerías de diferentes trabajos.
+
+Facilitan trabajar en varios proyectos sin que se mezclen entre sí.
+
+CREAR UN ENTORNO VIRTUAL EN WINDOWS Abre PowerShell o la terminal de tu editor de código.
+
+Crea o entra en la carpeta de tu proyecto:
+
+mkdir mi_proyecto_django cd mi_proyecto_django
+
+Crea el entorno virtual: python -m venv venv
+
+ACTIVAR EL ENTORNO VIRTUAL Usa el comando según la terminal que estés usando: En PowerShell:
+
+venv\Scripts\activate
+
+o intenta con:
+
+venv\Scripts\Activate
+
+En CMD:
+
+venv\Scripts\activate.bat
+
+Cuando el entorno esté activo, verás algo como esto al inicio de la línea: (venv) C:\Users\TuUsuario\mi_proyecto_django>
+
+DESACTIVAR EL ENTORNO VIRTUAL Para salir del entorno virtual, ejecuta: deactivate
+
+SI QUIERES SEGUIR CON LOS PASOS DEL PROFE Si quieres seguir el método del profesor, puedes crear el entorno así: python -m venv ~/.envs/my-first-env Verifica que se creó con: ls ~/.envs Si lo usas de esta forma, recuerda ajustar la ruta cuando lo actives.
+
+INSTALAR DJANGO Con el entorno activado, instala Django: Última versión:
+
+pip install django
+
+Versión específica:
+
+pip install django==4.2
+
+CREAR UN PROYECTO DJANGO Crea tu proyecto con:
+
+django-admin startproject mi_sitio Importante: Evita usar guiones (-) en el nombre, usa guiones bajos (_).
+
+Archivos que se crean: manage.py → ejecuta comandos de Django.
+
+Carpeta con configuraciones del proyecto.
+
+EJECUTAR EL SERVIDOR DE DESARROLLO Entra a la carpeta del proyecto:
+
+cd mi_sitio Ejecuta el servidor: python manage.py runserver Abre en tu navegador:
+
+http://127.0.0.1:8000/ Si aparece la página de bienvenida de Django, ¡todo está funcionando! 🚀

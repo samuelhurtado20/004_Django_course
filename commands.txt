@@ -1,0 +1,58 @@
+python --version
+where python
+dir
+python -m venv venv
+nvenv/Script/Activate
+
+Set-ExecutionPolicy -ExecutionPolice Remote
+cmd /c where python
+
+pypi.org
+
+pip install ruff
+
+pip list
+
+deactivate
+
+pip freeze > requirements.txt
+
+pip uninstall ruff
+
+pip install -r requirements.txt
+
+python dot env - .env
+
+
+pip install django
+django-admin --help
+django-admin startproject project_001
+cd projecy_001
+ls
+python manage.py --help
+python manage.py runserver
+
+
+
+
+Get-ChildItem -Path "routes" -Filter "*.py" | Select-Object Name
+Get-ChildItem -Path "controllers" -Filter "*.py" | Select-Object Name
+Get-ChildItem -Path "controllers" -Filter "*.py" | Select-Object Name
+
+
+
+
+para los que quieren empezar a usar uv que está de moda:
+
+
+uv init django-platzi
+cd django-platzi
+uv add django
+uv pip list
+
+
+
+
+Buenas noches. Envío las credenciales para la plataforma. 
+Usuario: studentefe10novb126
+Clave: EFE10NOVB126

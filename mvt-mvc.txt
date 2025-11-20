@@ -1,0 +1,50 @@
+Explicando con IA y mostrando la comparación con la arquitectura "MVC":
+
+Arquitectura MVT de Django: Una Explicación Sencilla
+
+Django utiliza un patrón de arquitectura llamado MVT (Model-View-Template), que es una variación del conocido patrón MVC (Model-View-Controller). Vamos a entender cada componente y cómo interactúan entre sí:
+
+Model (Modelo)
+
+El Modelo representa la estructura de datos de tu aplicación:
+
+Define las tablas de la base de datos como clases de Python
+Cada clase de modelo se convierte en una tabla en la base de datos
+Cada atributo de la clase se convierte en una columna de la tabla
+Maneja la lógica relacionada con los datos: validación, relaciones, consultas, etc.
+# Ejemplo de un modelo class Producto(models.Model): nombre = models.CharField(max_length=100) precio = models.DecimalField(max_digits=10, decimal_places=2) descripcion = models.TextField() fecha_creacion = models.DateTimeField(auto_now_add=True)
+
+View (Vista)
+
+La Vista procesa las solicitudes del usuario y devuelve respuestas:
+
+Recibe peticiones HTTP (GET, POST, etc.)
+Interactúa con el Modelo para obtener o modificar datos
+Prepara los datos para que sean presentados por el Template
+Devuelve una respuesta HTTP (HTML, JSON, redirect, etc.)
+# Ejemplo de una vista def lista_productos(request): productos = Producto.objects.all() return render(request, 'productos/lista.html', {'productos': productos})
+
+Template (Plantilla)
+
+El Template es responsable de la presentación visual:
+
+Define cómo se mostrarán los datos al usuario
+Es un archivo HTML con sintaxis especial de Django
+Permite insertar datos dinámicos en el HTML
+Puede incluir lógica de presentación simple (bucles, condiciones, etc.)
+<!-- Ejemplo de un template --> <h2>Lista de Productos</h2> <ul> {% for producto in productos %} <li>{{ producto.nombre }} - ${{ producto.precio }}</li> {% endfor %} </ul>
+
+Flujo de trabajo
+
+El usuario hace una petición a una URL
+Django usa el archivo urls.py para determinar qué Vista debe manejar la petición
+La Vista procesa la petición, interactúa con el Modelo si es necesario
+La Vista pasa los datos a un Template
+El Template renderiza los datos en HTML
+La Vista devuelve el HTML como respuesta al navegador
+A diferencia del MVC tradicional, en Django:
+
+La "Vista" funciona como un "Controlador"
+El "Template" funciona como la "Vista"
+El framework mismo maneja parte de lo que sería el "Controlador"
+Esta arquitectura permite una separación clara de responsabilidades, lo que hace que el código sea más organizado, mantenible y escalable.
