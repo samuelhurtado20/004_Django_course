@@ -2,7 +2,9 @@ python --version
 where python
 dir
 python -m venv venv
-nvenv/Script/Activate
+# This file must be used with "source bin/activate" *from bash*
+venv\Scripts\activate 
+
 
 Set-ExecutionPolicy -ExecutionPolice Remote
 cmd /c where python
