@@ -51,3 +51,9 @@ EJECUTAR EL SERVIDOR DE DESARROLLO Entra a la carpeta del proyecto:
 cd mi_sitio Ejecuta el servidor: python manage.py runserver Abre en tu navegador:
 
 http://127.0.0.1:8000/ Si aparece la página de bienvenida de Django, ¡todo está funcionando! 🚀
+
+
+
+
+
+https://platzi.com/live/live201125/

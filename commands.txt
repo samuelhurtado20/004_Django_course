@@ -55,6 +55,15 @@ uv pip list
 
 
 
-Buenas noches. Envío las credenciales para la plataforma. 
-Usuario: studentefe10novb126
-Clave: EFE10NOVB126
+
+
+*******************************************
+*******************************************
+
+npm install -g azure-functions-core-tools@4 --unsafe-perm true
+func --version
+node --version
+npm --version
+
+npm install -g azurite
+azurite --version
