@@ -29,11 +29,36 @@ python dot env - .env
 pip install django
 django-admin --help
 django-admin startproject project_001
-cd projecy_001
+cd project_001
 ls
 python manage.py --help
 python manage.py runserver
 
+*************************************
+python manage.py --help
+python manage.py startapp app_001
+
+
+python manage.py migrate
+python manage.py makemigrations
+
+python manage.py dbshell
+
+python manage.py shell
+
+
+
+************************************
+# in order of ExecutionPolice
+python -m venv venv
+venv\Scripts\activate
+pip install django
+pip freeze > requirements.txt
+django-admin --help
+django-admin startproject project_001
+cd project_001
+python manage.py --help
+python manage.py runserver
 
 
 

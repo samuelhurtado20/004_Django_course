@@ -1,0 +1,27 @@
+pip install mongoengine
+
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.dummy'
+
+    }
+
+}
+
+from mongoengine import connect
+
+connect(
+
+    db='nombre_de_tu_base_de_datos',
+
+    username='tu_usuario',
+
+    password='tu_contraseña',
+
+    host='mongodb+srv://<usuario>:<contraseña>@cluster0.mongodb.net/<nombre_de_tu_base>?retryWrites=true&w=majority',
+
+    alias='default'
+
+)
