@@ -60,7 +60,22 @@ cd project_001
 python manage.py --help
 python manage.py runserver
 
+************************************
+005
+************************************
+python -m venv venv 
+venv\Scripts\activate
+pip install django
+django-admin startproject coffee_shop   ** coffee_shop_proj
+code -r coffee_shop/
+ext black formatter, django, python, pylance
+create git ignore: gitignore.io
 
+
+
+
+************************************
+************************************
 
 Get-ChildItem -Path "routes" -Filter "*.py" | Select-Object Name
 Get-ChildItem -Path "controllers" -Filter "*.py" | Select-Object Name
