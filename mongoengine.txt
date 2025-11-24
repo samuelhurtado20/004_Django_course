@@ -16,9 +16,9 @@ connect(
 
     db='nombre_de_tu_base_de_datos',
 
-    username='tu_usuario',
+    username='',
 
-    password='tu_contraseña',
+    password='',
 
     host='mongodb+srv://<usuario>:<contraseña>@cluster0.mongodb.net/<nombre_de_tu_base>?retryWrites=true&w=majority',
 
